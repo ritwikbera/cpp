@@ -51,7 +51,7 @@ void update_map(map<K,V>& m, initializer_list<pair<K, V>> l)
 }
 
 
-
+enum State {Fail, Pass};
 
 int main(int argc, char const *argv[])
 {   
@@ -105,6 +105,17 @@ int main(int argc, char const *argv[])
         std::cout  << "{" << p.first << ", " << p.second << "}\n";
     }
 
+    State s(Pass);
 
+    switch(s){
+        case Pass:
+            cout << "Pass" << endl;
+            break;
+        case Fail:
+            cout << "Fail" << endl;
+            break;
+        default:
+            break;
+    }
     return 0;
 }
